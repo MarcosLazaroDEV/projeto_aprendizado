@@ -2,14 +2,14 @@
 Desafio: nível novato - Criando as Cartas do Super Trunfo.
 Atividade executada conforme parametros descritos no portal SAVA. 
 */
-#include <stdio.h> 
+#include <stdio.h>
 int main(){
     char estado1, estado2;
     char codigoCarta1[50], codigoCarta2[50];
     char nomeCidade1[50], nomeCidade2[50];
     int populacao1, populacao2;
-    float areaKm1, areaKm2;
-    float pib1, pib2;
+    float areaKm1, areaKm2; //densidadePop1, densidadePop2;
+    float pib1, pib2; //pibPerc1, pibPerc2;
     int npontosTurisicos1, npontosTurisicos2;
 
     //estapa de solicitações (Entradas) - Carta 1
@@ -34,6 +34,9 @@ int main(){
     printf("Digite a quantidade de pontos turisticos desta cidade: ");
     scanf("%d", &npontosTurisicos1);
     printf("Teste saida : %d  \n", npontosTurisicos1);
+
+    float densidadePop1 = (float) populacao1 / areaKm1;
+    float pibPerc1 = (float)  pib1 / populacao1;
 
     printf("\nCidade A preenchida\n");
     //Comando abaixo limpar tela
@@ -63,6 +66,9 @@ int main(){
     printf("Digite a quantidade de pontos turisticos desta cidade: ");
     scanf("%d", &npontosTurisicos2);
 
+    float densidadePop2 = (float) populacao2 / areaKm2;
+    float pibPerc2 =  (float) (pib2 / populacao2);
+
     system("clear");
 
     //inicio da etapa mostra cartas 1 e 2
@@ -77,6 +83,8 @@ int main(){
     printf("Àrea: %.2f \n", areaKm1);
     printf("PIB: %.2f \n", pib1);
     printf("Numero de Pontos Turisticos: %d \n", npontosTurisicos1);
+    printf("Densidade Populacional: %.2f \n", densidadePop1);
+    printf("PIB per Capta: %.2f\n", pibPerc1);
 
     printf("\n***************************************************\n");
 
@@ -88,6 +96,8 @@ int main(){
     printf("Àrea: %.2f \n", areaKm2);
     printf("PIB: %.2f \n", pib2);
     printf("Numero de Pontos Turisticos: %d \n", npontosTurisicos2);
+    printf("Densidade Populacional: %.2f \n", densidadePop2);
+    printf("PIB per Capta: %.2f \n", pibPerc2);
 
     printf("\n***************************************************\n");
 
